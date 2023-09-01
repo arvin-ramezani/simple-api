@@ -17,7 +17,7 @@ export class EmailsService {
 
       return { ...destRes.data };
     } catch (error) {
-      return new InternalServerErrorException();
+      return { ...new InternalServerErrorException(), ...{ error } };
     }
   }
 }
