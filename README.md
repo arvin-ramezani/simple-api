@@ -19,5 +19,5 @@ To get started with the development of this project, follow the steps below:
 To build and run the application in a production environment, follow these steps:
 
 1. Build the application:
-   `npm run build`
-   `npm run start:prod`
+   - `npm run build`
+   - `npm run start:prod`
