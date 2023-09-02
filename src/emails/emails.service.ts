@@ -13,6 +13,8 @@ export class EmailsService {
       const { email, password } = user;
       const destUrl = this.configService.get<string>('DESTINATION_URL');
 
+      if (!destUrl) return 'Destination URL not specified!';
+
       const destRes = await axios.post(`${destUrl}/`, { email, password });
 
       return { ...destRes.data };
